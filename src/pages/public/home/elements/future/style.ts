@@ -182,9 +182,13 @@ export const ButtonGroupContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 16px;
-    grid-gap: 24px;
-    gap: 24px;
     align-items: center;
+
+    &>* {
+        :not(:last-child) {
+            margin-right: 24px;
+        }
+    }
 `;
 
 export const CardButton = styled.button`
@@ -201,9 +205,13 @@ export const CardButton = styled.button`
     }
 `;
 
-export const ActionContainer = styled.div`
+export const ActionContainer = styled.div<{ isLast?: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--white);
+
+    @media (max-width: 423px) {
+        ${({ isLast }) => isLast ? `margin: 10px 0 0 10px;` : ``}
+    }
 `;

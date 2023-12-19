@@ -87,7 +87,7 @@ const Future = () => {
                                     }}>Roadmap</Span>
                                     <Icon icon='ChevronLeft' />
                                 </ActionContainer>
-                                <ActionContainer>
+                                <ActionContainer isLast>
                                     <Span $style={{
                                         size: '16px',
                                         weight: '700',
